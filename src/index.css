@@ -90,3 +90,66 @@ background-color: blue;
 .green{
   background-color: green;
 }
+
+.toll1 .toll2::after{
+  content:"";
+  position:absolute;
+  bottom:100%;
+  left:50%;
+  margin-left:-5px;
+  border-width: 8;
+  border-style: solid;
+  border-color: transparent transparent grey transparent;
+
+}
+.toll1 .toll2{
+  width:300px;
+  background-color: white;
+  color:#fff;
+  text-align:center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position:absolute;
+  z-index: 1;
+  left:0;
+  margin-left: -60px; 
+  color:black;
+  top:35px;
+  border:thin solid gray;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+.toll1 .toll2>div{
+width:100px;
+margin:10px; 
+}
+
+thead tr th[class^="Status"] .toll1 .toll2::after{
+  content:"";
+  position:absolute;
+  bottom:100%;
+  left:50%;
+  margin-left:-5px;
+  border-width: 8;
+  border-style: solid;
+  border-color: transparent transparent grey transparent;
+}
+
+.rowInputElements{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #e9ecef;
+}
+
+
+
+.row__input__cell{
+  position: relative;
+}
