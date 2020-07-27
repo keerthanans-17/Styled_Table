@@ -94,7 +94,7 @@ function ThingsToDo() {
             return item;
         });
         // setRow(rr);
-        dispatch({ type: "UPDATE_ROW", data: rr });
+        dispatch({ type: "UPDATE_ROW", data: rr }); 
         setIndex([
             ...index,
             { x: data.split("_")[1], y: event.target.id.split("_")[1] },
@@ -144,13 +144,13 @@ function ThingsToDo() {
                                 <th
                                     onClick={() => setVisible(!visible)}
                                     id={`col_${index}`}
-                                    draggable={true}
+                                    draggable={true}   
                                     onDragStart={(event) => drag(event)}
                                     onDrop={(event) => colDrop(event)}
                                     onDragOver={(event) => allowDrop(event)}
                                     className={`${header}_col`}
                                 >
-                                    <div className="tool1" style={{ position: "relative" }}>
+                                    <div  id={`col_${index}`} className="tool1" style={{ position: "relative" }}>
                                         Status
                                      <div className="tool2" hidden={visible} style={styles}>
                                             <table>
@@ -165,7 +165,6 @@ function ThingsToDo() {
                                                                 top: "0",
                                                                 height: "100%",
                                                                 padding: "10px"
-                                                                // margin: "10px",
                                                             }}
                                                         >
                                                             Neutral
@@ -181,10 +180,9 @@ function ThingsToDo() {
                                                                 top: "0",
                                                                 height: "100%",
                                                                 padding: "10px"
-                                                                // margin: "10px",
                                                             }}
                                                         >
-                                                            Working On it
+                                                            Done
                                                     </div>
                                                     </td>
                                                 </tr>
@@ -199,10 +197,9 @@ function ThingsToDo() {
                                                                 top: "0",
                                                                 height: "100%",
                                                                 padding: "10px"
-                                                                // margin: "10px",
                                                             }}
                                                         >
-                                                           Critical
+                                                         Working On It
                                                     </div>
                                                     </td>
                                                     <td>
@@ -219,10 +216,9 @@ function ThingsToDo() {
                                                                 top: "0",
                                                                 height: "100%",
                                                                 padding: "10px"
-                                                                // margin: "10px",
                                                             }}
                                                         >
-                                                            Done
+                                                            Critical
                                                    </div>
                                                     </td>
                                                     <td></td>
